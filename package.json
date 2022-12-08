@@ -1,0 +1,17 @@
+{
+  "name": "exm-sdk-simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@execution-machine/sdk": "^0.1.6",
+    "fs": "^0.0.1-security"
+  }
+}
