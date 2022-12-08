@@ -1,7 +1,11 @@
 import { Exm, ContractType } from '@execution-machine/sdk';
 import { readFileSync } from 'fs';
+import dotenv from "dotenv";
+dotenv.config();
 
-const exm = new Exm({ token: 'c65d8cac24a7afd90d2a65dbe01e75a61406529b3d9cf54578aa65cebc6ba6d311691b40078212b01462f47c154f' });
+const API_TOKEN = process.env.EXM_API_TOKEN
+
+const exm = new Exm({ token: API_TOKEN });
 
 const contractSource = readFileSync('function.js');
 

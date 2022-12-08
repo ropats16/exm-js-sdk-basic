@@ -1,10 +1,16 @@
 import { Exm } from '@execution-machine/sdk';
+import dotenv from "dotenv";
+dotenv.config();
 
-const exm = new Exm({ token: 'c65d8cac24a7afd90d2a65dbe01e75a61406529b3d9cf54578aa65cebc6ba6d311691b40078212b01462f47c154f' });
+const API_TOKEN = process.env.EXM_API_TOKEN;
+
+console.log("This is your token", API_TOKEN);
+
+const exm = new Exm({ token: API_TOKEN });
 
 const functionId = 'Ol5QIeYz40tMj2Q7j-02avEOAzf6hNxwe6QBshiTFpI';
 
-const inputs = [{ name: 'Tony Stark' }];
+const inputs = [{ name: 'Open Sourcerer' }];
 
 const writeTx = await exm.functions.write(functionId, inputs);
 console.log(writeTx);
